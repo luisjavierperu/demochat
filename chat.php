@@ -1,5 +1,5 @@
 <?php session_start();
-      if(empty($_SESSION['usuario'])){  header('Location:index.php'); }
+      if(empty($_SESSION['usuario'])){  header('Location:index.html'); }
 ?>
 <!DOCTYPE html>
 <html lang="es">
