@@ -1,0 +1,35 @@
+<?php session_start();
+       if(!empty($_SESSION['usuario'])){  header('Location:chat.php'); }
+       if(isset($_POST['entrar'])){  $_SESSION['usuario']=$_POST['txt_usuario']; if(!empty($_SESSION['usuario'])){  header('Location:chat.php'); }}
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<br><br><br><br>
+<div class="container">
+<center>    
+<h1>CHAT SENCILLO DE LUISHR18</h1>
+</center>
+<form action="index.php" method="post">
+        <div class="container">
+            <div class="row p-3">
+                    <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+                        <div class="form-group">
+                          <input type="text" id="txt_usuario" name="txt_usuario" class="form-control form-control-sm" placeholder="Ingrese usuario...">
+                        </div>
+                    </div>
+                    <div class="col-2  col-sm-2  col-md-2  col-lg-2  col-xl-2">
+                        <div class="form-group">
+                              <button id="entrar" type="submit" name="entrar"  class="btn btn-primary btn-sm btn-block">Entrar</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+</form>
+</div>
+</body>
+</html>
